@@ -12,7 +12,7 @@ function App() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5050/save", {
+      const res = await fetch("https://tinyurl-backend-production-1ee7.up.railway.app/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ longUrl: longUrl }),
