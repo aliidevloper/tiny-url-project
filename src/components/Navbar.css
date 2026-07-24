@@ -1,11 +1,11 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .navbar {
-  background: linear-gradient(90deg,#0A6683, #0b2b6b);
-  font-family:Arial, Helvetica, sans-serif;
+  background: linear-gradient(90deg, #0A6683, #0b2b6b);
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   height: 80px;
   padding: 0 60px;
@@ -13,7 +13,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .navbar-logo {
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,41 +20,34 @@
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
-  
 }
-
 .links {
-  padding-right: 350px;
   display: flex;
   gap: 40px;
 }
-
 .links a {
   color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
   transition: 0.3s;
+  white-space: nowrap;
 }
-
 .links a:hover {
   opacity: 0.8;
 }
-
 .login-button {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .login-button a:first-child {
   color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
-  padding-right: 10px;
+  white-space: nowrap;
 }
-
 .login-button a:last-child {
   text-decoration: none;
   background: #07637D;
@@ -64,8 +56,53 @@
   border-radius: 6px;
   font-weight: 600;
   transition: 0.3s;
+  white-space: nowrap;
 }
-
 .login-button a:last-child:hover {
   background: #6f92cf;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 30px;
+  }
+  .links {
+    gap: 20px;
+  }
+  .links a {
+    font-size: 16px;
+  }
+  .navbar-logo {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px 20px;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .navbar-logo {
+    font-size: 1.8rem;
+  }
+  .links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .links a {
+    font-size: 14px;
+  }
+  .login-button {
+    gap: 12px;
+  }
+  .login-button a:first-child,
+  .login-button a:last-child {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
 }
